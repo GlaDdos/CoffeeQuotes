@@ -69,10 +69,12 @@ body{
 
 .button-area{
     height: 2em;
-}
-.button {
     display: block;
+    text-align: center;
+}
+a.button {
     height: 3em;
+    font-weight: normal; 
     padding:0.5em 1em 0.5em 1em;
     margin-left: auto;
     margin-right: auto;
@@ -80,10 +82,15 @@ body{
     text-align: center;
     background-color: transparent;
     border: 1px solid rgba(255, 255, 255, 0.16);
-    border-radius: 0.5em;
+    border-radius: 0.3em;
+    text-decoration: none;
 }
 
 .button:hover{
     border-color: white;
     
+}
+
+i[class^="ion"]{
+    padding-right: 0.1em;
 }

@@ -6,25 +6,9 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <script>window.twttr = (function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0],
-    t = window.twttr || {};
-  if (d.getElementById(id)) return t;
-  js = d.createElement(s);
-  js.id = id;
-  js.src = "https://platform.twitter.com/widgets.js";
-  fjs.parentNode.insertBefore(js, fjs);
- 
-  t._e = [];
-  t.ready = function(f) {
-    t._e.push(f);
-  };
- 
-  return t;
-}(document, "script", "twitter-wjs"));
-</script>
         <link rel="stylesheet" href="css/main.css" type="text/css"/>
         <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" type="text/css">
         <title>CofeeQuotes</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -39,8 +23,8 @@ and open the template in the editor.
         <div class="container">
             <div class="quotearea"><p id="quote">Get your random quote by clicking the button below. You can also tweet the quote if you want to share it.</p></div>
             <div class="button-area">
-                <button class="button">Random quote</button>
-                <div id="tweetBtn"></div>
+                <a class="button random"><i class="ion-ios-shuffle"></i> Random quote</a>
+                <a class="button tweeter" href="#" target="_blank"><i class="ion-social-twitter-outline"></i> Twitter</a>
             </div>
         </div>
     </body>
