@@ -18,9 +18,11 @@
 
 $(document).ready(function(){
     
+    
+
     $(".button").on("click", function(){
        console.log("clicked!");
-       generate(); 
+       generate();
     });
     
     var quoteNr = 0;
@@ -36,6 +38,19 @@ $(document).ready(function(){
                  "<p class=\"author\"> -- " + quoteArr[quoteNr].author + "</p>";
     }
     
+$('.button').on('click', function(ev) {
+  ev.preventDefault();
+  // Remove existing iframe
+  $('#tweetBtn iframe').remove();
+  // Generate new markup
+  var tweetBtn = $('<a></a>')
+    .addClass('twitter-share-button')
+    .attr('href', 'http://twitter.com/share')
+    .attr('data-url', 'http://codepen.io/lodhiavinash/pen/PZWGpP')
+    .attr('data-text',quoteArr[quoteNr].quote + " - "+ quoteArr[quoteNr].author );
+  $('#tweetBtn').append(tweetBtn);
+  twttr.widgets.load();
+
 });
 
-
+});

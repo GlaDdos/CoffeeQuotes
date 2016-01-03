@@ -6,6 +6,23 @@ and open the template in the editor.
 -->
 <html>
     <head>
+        <script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+ 
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+ 
+  return t;
+}(document, "script", "twitter-wjs"));
+</script>
         <link rel="stylesheet" href="css/main.css" type="text/css"/>
         <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
         <title>CofeeQuotes</title>
@@ -16,13 +33,14 @@ and open the template in the editor.
     </head>
     <body>
         <div class="header">
-            <img src="img/coffee-xxl.png" alt="CoffeLogo">
+            
             <h1>CofeeQuotes</h1>
         </div>
         <div class="container">
-            <div class="quotearea"><p>This is the plce where quotes will reside.</p></div>
+            <div class="quotearea"><p id="quote">Get your random quote by clicking the button below. You can also tweet the quote if you want to share it.</p></div>
             <div class="button-area">
-                <button class="button">New quote</button>
+                <button class="button">Random quote</button>
+                <div id="tweetBtn"></div>
             </div>
         </div>
     </body>
